@@ -1,13 +1,5 @@
-package org.shared-lib
+package org.shared-lib;
 
-class Mvn implements Serializable {
-    def steps
-
-    Mvn(steps) {
-        this.steps = steps
-    }
-
-    def javaBuild(String commandOpt) {
-        steps.sh "mvn ${commandOpt}"
-    }
+def javaBuild(COMMAND_OPT){
+    sh "mvn ${COMMAND_OPT}"
 }
